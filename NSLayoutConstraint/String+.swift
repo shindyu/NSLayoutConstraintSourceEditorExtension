@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+extension String {
+    var prepared: String? {
+        let line = trimmingCharacters(in: .whitespacesAndNewlines)
+        return line.isEmpty ? nil : line
+    }
+}

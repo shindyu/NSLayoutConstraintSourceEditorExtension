@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1749F0D2206BFACB007314AF /* CreateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749F0D0206BFACB007314AF /* CreateCommand.swift */; };
+		1749F0D3206BFACB007314AF /* ConvertCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749F0D1206BFACB007314AF /* ConvertCommand.swift */; };
 		175026C5206BCC310056ED14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175026C4206BCC310056ED14 /* AppDelegate.swift */; };
 		175026C7206BCC310056ED14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175026C6206BCC310056ED14 /* Assets.xcassets */; };
 		175026CA206BCC310056ED14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175026C8206BCC310056ED14 /* MainMenu.xib */; };
 		175026D6206BCC310056ED14 /* SourceEditorExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175026D5206BCC310056ED14 /* SourceEditorExtensionTests.swift */; };
+		175026E7206BCC430056ED14 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175026E6206BCC430056ED14 /* Cocoa.framework */; };
+		175026EA206BCC430056ED14 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175026E9206BCC430056ED14 /* SourceEditorExtension.swift */; };
+		175026F1206BCC430056ED14 /* NSLayoutConstraint.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 175026E4206BCC430056ED14 /* NSLayoutConstraint.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		17B92C8E206BFDAF0067DC00 /* XCSourceEditorCommand+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B92C8D206BFDAF0067DC00 /* XCSourceEditorCommand+.swift */; };
+		17B92C90206BFE4B0067DC00 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B92C8F206BFE4B0067DC00 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,9 +28,32 @@
 			remoteGlobalIDString = 175026C0206BCC310056ED14;
 			remoteInfo = SourceEditorExtension;
 		};
+		175026EF206BCC430056ED14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 175026B9206BCC310056ED14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 175026E3206BCC430056ED14;
+			remoteInfo = NSLayoutConstraint;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		175026F5206BCC430056ED14 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				175026F1206BCC430056ED14 /* NSLayoutConstraint.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1749F0D0206BFACB007314AF /* CreateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCommand.swift; sourceTree = "<group>"; };
+		1749F0D1206BFACB007314AF /* ConvertCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertCommand.swift; sourceTree = "<group>"; };
 		175026C1206BCC310056ED14 /* SourceEditorExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SourceEditorExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175026C4206BCC310056ED14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175026C6206BCC310056ED14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,6 +63,13 @@
 		175026D1206BCC310056ED14 /* SourceEditorExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SourceEditorExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		175026D5206BCC310056ED14 /* SourceEditorExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtensionTests.swift; sourceTree = "<group>"; };
 		175026D7206BCC310056ED14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175026E4206BCC430056ED14 /* NSLayoutConstraint.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NSLayoutConstraint.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		175026E6206BCC430056ED14 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		175026E9206BCC430056ED14 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		175026ED206BCC430056ED14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175026EE206BCC430056ED14 /* NSLayoutConstraint.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSLayoutConstraint.entitlements; sourceTree = "<group>"; };
+		17B92C8D206BFDAF0067DC00 /* XCSourceEditorCommand+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCSourceEditorCommand+.swift"; sourceTree = "<group>"; };
+		17B92C8F206BFE4B0067DC00 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +87,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		175026E1206BCC430056ED14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				175026E7206BCC430056ED14 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +103,8 @@
 			children = (
 				175026C3206BCC310056ED14 /* SourceEditorExtension */,
 				175026D4206BCC310056ED14 /* SourceEditorExtensionTests */,
+				175026E8206BCC430056ED14 /* NSLayoutConstraint */,
+				175026E5206BCC430056ED14 /* Frameworks */,
 				175026C2206BCC310056ED14 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +114,7 @@
 			children = (
 				175026C1206BCC310056ED14 /* SourceEditorExtension.app */,
 				175026D1206BCC310056ED14 /* SourceEditorExtensionTests.xctest */,
+				175026E4206BCC430056ED14 /* NSLayoutConstraint.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -92,6 +140,28 @@
 			path = SourceEditorExtensionTests;
 			sourceTree = "<group>";
 		};
+		175026E5206BCC430056ED14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				175026E6206BCC430056ED14 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		175026E8206BCC430056ED14 /* NSLayoutConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				1749F0D1206BFACB007314AF /* ConvertCommand.swift */,
+				1749F0D0206BFACB007314AF /* CreateCommand.swift */,
+				17B92C8F206BFE4B0067DC00 /* String+.swift */,
+				17B92C8D206BFDAF0067DC00 /* XCSourceEditorCommand+.swift */,
+				175026E9206BCC430056ED14 /* SourceEditorExtension.swift */,
+				175026ED206BCC430056ED14 /* Info.plist */,
+				175026EE206BCC430056ED14 /* NSLayoutConstraint.entitlements */,
+			);
+			path = NSLayoutConstraint;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,10 +172,12 @@
 				175026BD206BCC310056ED14 /* Sources */,
 				175026BE206BCC310056ED14 /* Frameworks */,
 				175026BF206BCC310056ED14 /* Resources */,
+				175026F5206BCC430056ED14 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				175026F0206BCC430056ED14 /* PBXTargetDependency */,
 			);
 			name = SourceEditorExtension;
 			productName = SourceEditorExtension;
@@ -130,6 +202,23 @@
 			productReference = 175026D1206BCC310056ED14 /* SourceEditorExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		175026E3206BCC430056ED14 /* NSLayoutConstraint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 175026F2206BCC430056ED14 /* Build configuration list for PBXNativeTarget "NSLayoutConstraint" */;
+			buildPhases = (
+				175026E0206BCC430056ED14 /* Sources */,
+				175026E1206BCC430056ED14 /* Frameworks */,
+				175026E2206BCC430056ED14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSLayoutConstraint;
+			productName = NSLayoutConstraint;
+			productReference = 175026E4206BCC430056ED14 /* NSLayoutConstraint.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +238,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 175026C0206BCC310056ED14;
 					};
+					175026E3206BCC430056ED14 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 175026BC206BCC310056ED14 /* Build configuration list for PBXProject "SourceEditorExtension" */;
@@ -166,6 +259,7 @@
 			targets = (
 				175026C0206BCC310056ED14 /* SourceEditorExtension */,
 				175026D0206BCC310056ED14 /* SourceEditorExtensionTests */,
+				175026E3206BCC430056ED14 /* NSLayoutConstraint */,
 			);
 		};
 /* End PBXProject section */
@@ -181,6 +275,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		175026CF206BCC310056ED14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		175026E2206BCC430056ED14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +307,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		175026E0206BCC430056ED14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B92C8E206BFDAF0067DC00 /* XCSourceEditorCommand+.swift in Sources */,
+				1749F0D2206BFACB007314AF /* CreateCommand.swift in Sources */,
+				17B92C90206BFE4B0067DC00 /* String+.swift in Sources */,
+				175026EA206BCC430056ED14 /* SourceEditorExtension.swift in Sources */,
+				1749F0D3206BFACB007314AF /* ConvertCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -213,6 +326,11 @@
 			isa = PBXTargetDependency;
 			target = 175026C0206BCC310056ED14 /* SourceEditorExtension */;
 			targetProxy = 175026D2206BCC310056ED14 /* PBXContainerItemProxy */;
+		};
+		175026F0206BCC430056ED14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 175026E3206BCC430056ED14 /* NSLayoutConstraint */;
+			targetProxy = 175026EF206BCC430056ED14 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -337,6 +455,7 @@
 		175026DB206BCC310056ED14 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +472,7 @@
 		175026DC206BCC310056ED14 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -400,6 +520,38 @@
 			};
 			name = Release;
 		};
+		175026F3206BCC430056ED14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NSLayoutConstraint/NSLayoutConstraint.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				INFOPLIST_FILE = NSLayoutConstraint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension.NSLayoutConstraint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		175026F4206BCC430056ED14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NSLayoutConstraint/NSLayoutConstraint.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				INFOPLIST_FILE = NSLayoutConstraint/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension.NSLayoutConstraint;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -426,6 +578,15 @@
 			buildConfigurations = (
 				175026DE206BCC310056ED14 /* Debug */,
 				175026DF206BCC310056ED14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		175026F2206BCC430056ED14 /* Build configuration list for PBXNativeTarget "NSLayoutConstraint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				175026F3206BCC430056ED14 /* Debug */,
+				175026F4206BCC430056ED14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

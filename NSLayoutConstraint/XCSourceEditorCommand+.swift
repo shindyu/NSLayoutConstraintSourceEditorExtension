@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import XcodeKit
+
+func getSelectedLinesIndexes(fromBuffer buffer: XCSourceTextBuffer) -> [Int] {
+    var result: [Int] = []
+    for range in buffer.selections {
+        guard let range = range as? XCSourceTextRange else { preconditionFailure() }
+        for lineNumber in range.start.line...range.end.line {
+            result.append(lineNumber)
+        }
+    }
+    return result
+}
+

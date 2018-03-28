@@ -9,19 +9,8 @@
 import Foundation
 import XcodeKit
 
-private class NSConstraintExtractor {
-    private static func getSelectedLinesIndexes(fromBuffer buffer: XCSourceTextBuffer) -> [Int] {
-        var result: [Int] = []
-        for range in buffer.selections {
-            guard let range = range as? XCSourceTextRange else { preconditionFailure() }
-            for lineNumber in range.start.line...range.end.line {
-                result.append(lineNumber)
-            }
-        }
-        return result
-    }
-    
-    static func extractTargetViews(fromBuffer buffer: XCSourceTextBuffer) -> [String] {
+class CreateCommand: NSObject, XCSourceEditorCommand {
+    private func extractTargetViews(fromBuffer buffer: XCSourceTextBuffer) -> [String] {
         var result: [String] = []
         let idx = getSelectedLinesIndexes(fromBuffer: buffer)
         for index in idx {
@@ -31,9 +20,6 @@ private class NSConstraintExtractor {
         }
         return result
     }
-}
-
-class CreateCommand: NSObject, XCSourceEditorCommand {
     
     private func generateConstraints(for targetViews: [String], tabWidth: Int) -> String {
         let indent = String(repeating: " ", count: tabWidth)
@@ -41,10 +27,10 @@ class CreateCommand: NSObject, XCSourceEditorCommand {
             """
             \(indent)\(indent)\(targetView).translatesAutoresizingMaskIntoConstraints = false
             \(indent)\(indent)NSLayoutConstraint.activate([
-            \(indent)\(indent)\(indent)\(targetView).topAnchor.constraint(equalTo:  <#value#>.topAnchor),
-            \(indent)\(indent)\(indent)\(targetView).leftAnchor.constraint(equalTo: <#value#>.leftAnchor),
-            \(indent)\(indent)\(indent)\(targetView).rightAnchor.constraint(equalTo: <#value#>.rightAnchor),
-            \(indent)\(indent)\(indent)\(targetView).bottomAnchor.constraint(equalTo: <#value#>.bottomAnchor)
+            \(indent)\(indent)\(indent)\(targetView).topAnchor.constraint(equalTo: <#targetView#>.topAnchor),
+            \(indent)\(indent)\(indent)\(targetView).leftAnchor.constraint(equalTo: <#targetView#>.leftAnchor),
+            \(indent)\(indent)\(indent)\(targetView).rightAnchor.constraint(equalTo: <#targetView#>.rightAnchor),
+            \(indent)\(indent)\(indent)\(targetView).bottomAnchor.constraint(equalTo: <#targetView#>.bottomAnchor)
             \(indent)\(indent)\(indent)])
             """
         }.joined(separator: "\n\n")
@@ -64,12 +50,14 @@ class CreateCommand: NSObject, XCSourceEditorCommand {
         guard invocation.buffer.contentUTI == "public.swift-source" else { return }
         guard let lastIndex = lastSelectedLine(fromBuffer: invocation.buffer) else { return }
         
-        let targetViews = NSConstraintExtractor.extractTargetViews(fromBuffer: invocation.buffer)
+        let targetViews = extractTargetViews(fromBuffer: invocation.buffer)
         
         let str = generateConstraints(for: targetViews, tabWidth: invocation.buffer.tabWidth)
         invocation.buffer.lines.insert(str, at: lastIndex + 1)
         
-        completionHandler(nil)
+        defer {
+            completionHandler(nil)
+        }
     }
 }
 

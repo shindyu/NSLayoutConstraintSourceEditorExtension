@@ -4,10 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>NSLayoutConstraint.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SourceEditorExtension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>175026C0206BCC310056ED14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>175026D0206BCC310056ED14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>175026E3206BCC430056ED14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
