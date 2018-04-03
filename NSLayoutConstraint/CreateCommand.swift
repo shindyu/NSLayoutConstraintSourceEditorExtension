@@ -23,7 +23,7 @@ class CreateCommand: NSObject, XCSourceEditorCommand {
     
     private func generateConstraints(for targetViews: [String], tabWidth: Int) -> String {
         let indent = String(repeating: " ", count: tabWidth)
-        let str = targetViews.map { targetView in
+        return targetViews.map { targetView in
             """
             \(indent)\(indent)\(targetView).translatesAutoresizingMaskIntoConstraints = false
             \(indent)\(indent)NSLayoutConstraint.activate([
@@ -34,8 +34,6 @@ class CreateCommand: NSObject, XCSourceEditorCommand {
             \(indent)\(indent)\(indent)])
             """
         }.joined(separator: "\n\n")
-        
-        return str
     }
     
     private func startSelectedLine(fromBuffer buffer: XCSourceTextBuffer) -> Int? {
