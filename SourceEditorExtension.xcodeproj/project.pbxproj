@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1749F0D2206BFACB007314AF /* CreateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749F0D0206BFACB007314AF /* CreateCommand.swift */; };
-		1749F0D3206BFACB007314AF /* ConvertCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1749F0D1206BFACB007314AF /* ConvertCommand.swift */; };
 		175026C5206BCC310056ED14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175026C4206BCC310056ED14 /* AppDelegate.swift */; };
 		175026C7206BCC310056ED14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175026C6206BCC310056ED14 /* Assets.xcassets */; };
 		175026CA206BCC310056ED14 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175026C8206BCC310056ED14 /* MainMenu.xib */; };
@@ -53,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		1749F0D0206BFACB007314AF /* CreateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCommand.swift; sourceTree = "<group>"; };
-		1749F0D1206BFACB007314AF /* ConvertCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertCommand.swift; sourceTree = "<group>"; };
 		175026C1206BCC310056ED14 /* SourceEditorExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SourceEditorExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175026C4206BCC310056ED14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175026C6206BCC310056ED14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 		175026E8206BCC430056ED14 /* NSLayoutConstraint */ = {
 			isa = PBXGroup;
 			children = (
-				1749F0D1206BFACB007314AF /* ConvertCommand.swift */,
 				1749F0D0206BFACB007314AF /* CreateCommand.swift */,
 				17B92C8F206BFE4B0067DC00 /* String+.swift */,
 				17B92C8D206BFDAF0067DC00 /* XCSourceEditorCommand+.swift */,
@@ -315,7 +312,6 @@
 				1749F0D2206BFACB007314AF /* CreateCommand.swift in Sources */,
 				17B92C90206BFE4B0067DC00 /* String+.swift in Sources */,
 				175026EA206BCC430056ED14 /* SourceEditorExtension.swift in Sources */,
-				1749F0D3206BFACB007314AF /* ConvertCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +456,7 @@
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension;
@@ -477,7 +473,7 @@
 				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension;
@@ -526,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = NSLayoutConstraint/NSLayoutConstraint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = NSLayoutConstraint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension.NSLayoutConstraint;
@@ -542,7 +538,7 @@
 				CODE_SIGN_ENTITLEMENTS = NSLayoutConstraint/NSLayoutConstraint.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9DK86E6NGL;
+				DEVELOPMENT_TEAM = 653H53HHBU;
 				INFOPLIST_FILE = NSLayoutConstraint/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = shindyu.SourceEditorExtension.NSLayoutConstraint;
